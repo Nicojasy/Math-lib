@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="Image\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="Image\**" />
+    <None Remove="bin\**" />
+    <None Remove="Image\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Remainder.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Min.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Max.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Logical_XOR.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Logical_OR.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Logical_AND.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Logarithm.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Subtraction.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Multiplication.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Division.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Image\Addition.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
