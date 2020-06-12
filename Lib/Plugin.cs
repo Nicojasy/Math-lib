@@ -27,6 +27,7 @@ namespace ds.test.impl
         public string Version { get; set; }
         public Image Image { get; set; }
         public string Description { get; set; }
+        
         public int? Run(int input1, int input2)
         {
             try
@@ -37,9 +38,10 @@ namespace ds.test.impl
             catch { return null; }
         }
     }
+    
     internal abstract class SwapClass
     {
-        public abstract void Swap<T>(ref T lhs, ref T rhs);
+        protected abstract void Swap<T>(ref T lhs, ref T rhs);
 
     }
 
@@ -58,13 +60,15 @@ namespace ds.test.impl
         public string Version { get; set; }
         public Image Image { get; set; }
         public string Description { get; set; }
-        public override void Swap<T>(ref T lhs, ref T rhs)
+        
+        protected override void Swap<T>(ref T lhs, ref T rhs)
         {
             T temp;
             temp = lhs;
             lhs = rhs;
             rhs = temp;
         }
+
         public int? Run(int input1, int input2)
         {
             try
